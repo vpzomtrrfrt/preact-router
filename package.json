@@ -32,6 +32,7 @@
 		"fix": "npm run lint -- --fix",
 		"test:unit": "karmatic",
 		"test:ts": "tsc -p ./test",
+		"prepare": "npm run build",
 		"prepublishOnly": "npm-run-all build test",
 		"release": "npm run build && git commit -am $npm_package_version && git tag $npm_package_version && git push && git push --tags && npm publish",
 		"format": "prettier --write ."
